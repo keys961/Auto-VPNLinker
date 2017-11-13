@@ -45,11 +45,11 @@ namespace AutoVPNLinker
             client.Credentials = new System.Net.NetworkCredential(userName, password);
 
             System.Net.Mail.MailMessage msg = new System.Net.Mail.MailMessage();
-            msg.From = new MailAddress(userName, "MSI GE-60");
+            msg.From = new MailAddress(userName, "Your PC");
             msg.To.Add(userName);
 
             msg.Subject = title;   
-            msg.Body = Body;
+            msg.Body = "Current IP address: " + Body;
             msg.BodyEncoding = System.Text.Encoding.UTF8;   
             msg.IsBodyHtml = true;
 
